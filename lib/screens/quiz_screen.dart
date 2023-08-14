@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/score_screen.dart';
+
+import '../Widgets/answer_item.dart';
 
 class QuizScreen extends StatelessWidget {
   const QuizScreen({super.key});
@@ -80,135 +81,19 @@ class QuizScreen extends StatelessWidget {
                 fontFamily: 'Lobster',
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const ScoreScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                height: MediaQuery.sizeOf(context).height * 0.09,
-                width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 101, 169, 199),
-                  borderRadius: BorderRadius.circular(60.0),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Paris",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2,
-                      fontFamily: 'Sacramento',
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            answerItem(text: 'Paris', context: context),
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.05,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const ScoreScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                height: MediaQuery.sizeOf(context).height * 0.09,
-                width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 101, 169, 199),
-                  borderRadius: BorderRadius.circular(60.0),
-                ),
-                child: const Center(
-                  child: Text(
-                    "London",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2,
-                      fontFamily: 'Sacramento',
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            answerItem(text: 'London', context: context),
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.05,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const ScoreScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                height: MediaQuery.sizeOf(context).height * 0.09,
-                width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 101, 169, 199),
-                  borderRadius: BorderRadius.circular(60.0),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Mosco",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2,
-                      fontFamily: 'Sacramento',
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            answerItem(text: 'Mosco', context: context),
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.05,
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const ScoreScreen(),
-                  ),
-                );
-              },
-              child: Container(
-                height: MediaQuery.sizeOf(context).height * 0.09,
-                width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 101, 169, 199),
-                  borderRadius: BorderRadius.circular(60.0),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Roma",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2,
-                      fontFamily: 'Sacramento',
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            answerItem(text: 'Roma', context: context),
           ],
         ),
       ),
