@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens.dart/start_screen.dart';
+import 'package:flutter_application_1/screens/start_screen.dart';
 
-class Score_Screen extends StatelessWidget {
-  const Score_Screen({super.key});
+class ScoreScreen extends StatelessWidget {
+  const ScoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
+        body: SizedBox(
       width: double.infinity,
       height: double.infinity,
       child: Column(
@@ -25,7 +25,7 @@ class Score_Screen extends StatelessWidget {
               fontFamily: 'Lobster',
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           const Text(
@@ -41,12 +41,12 @@ class Score_Screen extends StatelessWidget {
           SizedBox(height: MediaQuery.sizeOf(context).height * 0.25),
           ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => StartScreen()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const StartScreen()));
               },
               style: ElevatedButton.styleFrom(
                 fixedSize: const Size(250, 100),
-                backgroundColor: Color.fromARGB(255, 173, 58, 165),
+                backgroundColor: const Color.fromARGB(255, 173, 58, 165),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),

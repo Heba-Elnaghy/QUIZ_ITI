@@ -12,9 +12,11 @@ class StartScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/wall.png"),
-                fit: BoxFit.cover)),
+          image: DecorationImage(
+            image: AssetImage("assets/images/wall.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -27,7 +29,7 @@ class StartScreen extends StatelessWidget {
               height: 200,
               width: 400,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             const Text(
@@ -40,7 +42,7 @@ class StartScreen extends StatelessWidget {
                 fontFamily: 'Lobster',
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             const Text(
@@ -56,8 +58,8 @@ class StartScreen extends StatelessWidget {
             const SizedBox(height: 150),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const LoginScreen()));
                 },
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(300, 50),

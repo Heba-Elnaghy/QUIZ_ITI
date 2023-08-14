@@ -59,12 +59,12 @@ class LoginScreen extends StatelessWidget {
 
                           focusedBorder: OutlineInputBorder(
                             borderSide:
-                                BorderSide(color: Colors.black, width: 2),
+                                const BorderSide(color: Colors.black, width: 2),
                             borderRadius: BorderRadius.circular(50),
                           ),
                           // border: ,
                           enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
+                            borderSide: const BorderSide(color: Colors.black),
                             borderRadius: BorderRadius.circular(50),
                           ),
                         ),
@@ -86,40 +86,40 @@ class LoginScreen extends StatelessWidget {
                           suffixIcon: IconButton(
                             icon: const Icon(Icons.visibility_off),
                             onPressed: () {
-                              print('clicked');
+                              debugPrint('clicked');
                             },
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide:
-                                BorderSide(color: Colors.black, width: 2),
+                                const BorderSide(color: Colors.black, width: 2),
                             borderRadius: BorderRadius.circular(50),
                           ),
                           // border: ,
                           enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black),
+                            borderSide: const BorderSide(color: Colors.black),
                             borderRadius: BorderRadius.circular(50),
                           ),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text("New to quiz app?"),
-                          SizedBox(
+                          const Text("New to quiz app?"),
+                          const SizedBox(
                             width: 10,
                           ),
                           InkWell(
                               onTap: () {
-                                print("hello");
+                                debugPrint("hello");
                               },
-                              child: Text(
+                              child: const Text(
                                 "Register",
                                 style: TextStyle(color: Colors.green),
                               ))
                         ],
                       ),
-                      SizedBox(height: 40),
+                      const SizedBox(height: 40),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
@@ -130,40 +130,40 @@ class LoginScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text("login"),
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25.0),
                             ),
                             backgroundColor: Colors.green,
                             elevation: 20,
-                            minimumSize: Size(130, 40)),
+                            minimumSize: const Size(130, 40)),
+                        child: const Text("login"),
                       ),
-                      SizedBox(height: 20),
-                      Icon(
+                      const SizedBox(height: 20),
+                      const Icon(
                         Icons.fingerprint,
                         color: Colors.blue,
                         size: 50,
                       ),
-                      Text(
+                      const Text(
                         "Use Touch ID",
                         style: TextStyle(color: Colors.grey),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             children: [
                               Checkbox(value: true, onChanged: (value) {}),
-                              Text("Remember me"),
+                              const Text("Remember me"),
                             ],
                           ),
                           InkWell(
                             onTap: () {
-                              print("Hello");
+                              debugPrint("Hello");
                             },
-                            child: Text(
+                            child: const Text(
                               "Forget password",
                               style: TextStyle(color: Colors.green),
                             ),
